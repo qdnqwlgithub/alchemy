@@ -6,6 +6,10 @@ public interface ErrorCodeConstants {
 
     ErrorCode CATEGORY_NOT_EXISTS = new ErrorCode(100, "分类不存在");
     ErrorCode ITEM_NOT_EXISTS = new ErrorCode(200, "元素不存在");
+    ErrorCode EXAMPLE_NOT_EXISTS = new ErrorCode(300, "案例不存在");
+    ErrorCode EXAMPLE_CATEGORY_NOT_EXISTS = new ErrorCode(400, "案例分类不存在");
+    ErrorCode COOPERATIVE_PARTNER_NOT_EXISTS = new ErrorCode(500, "合作伙伴不存在");
+    ErrorCode MINI_APP_CONFIG_NOT_EXISTS = new ErrorCode(600, "小程序配置不存在");
 
 
 
