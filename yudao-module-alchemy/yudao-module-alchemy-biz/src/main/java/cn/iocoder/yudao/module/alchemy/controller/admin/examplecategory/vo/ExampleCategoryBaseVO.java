@@ -1,5 +1,7 @@
 package cn.iocoder.yudao.module.alchemy.controller.admin.examplecategory.vo;
 
+import cn.iocoder.yudao.module.alchemy.controller.admin.category.vo.I18Lon;
+import cn.iocoder.yudao.module.alchemy.controller.admin.category.vo.I18Str;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import java.util.*;
@@ -16,10 +18,10 @@ public class ExampleCategoryBaseVO {
 
     @Schema(description = "案例分类名称", required = true, example = "张三")
     @NotNull(message = "案例分类名称不能为空")
-    private String name;
+    private I18Str name;
 
     @Schema(description = "显示顺序", required = true)
     @NotNull(message = "显示顺序不能为空")
-    private String sort;
+    private I18Lon sort;
 
 }

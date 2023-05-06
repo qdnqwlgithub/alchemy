@@ -18,29 +18,31 @@ import cn.iocoder.yudao.module.alchemy.controller.admin.example.vo.*;
 public interface ExampleMapper extends BaseMapperX<ExampleDO> {
 
     default PageResult<ExampleDO> selectPage(ExamplePageReqVO reqVO) {
-        return selectPage(reqVO, new LambdaQueryWrapperX<ExampleDO>()
-                .likeIfPresent(ExampleDO::getName, reqVO.getName())
-                .eqIfPresent(ExampleDO::getCategoryId, reqVO.getCategoryId())
-                .eqIfPresent(ExampleDO::getAvatar, reqVO.getAvatar())
-                .eqIfPresent(ExampleDO::getCarousel, reqVO.getCarousel())
-                .eqIfPresent(ExampleDO::getContent, reqVO.getContent())
-                .eqIfPresent(ExampleDO::getSort, reqVO.getSort())
-                .eqIfPresent(ExampleDO::getIndexFlag, reqVO.getIndexFlag())
-                .eqIfPresent(ExampleDO::getIndexSort, reqVO.getIndexSort())
-                .orderByDesc(ExampleDO::getId));
+//        return selectPage(reqVO, new LambdaQueryWrapperX<ExampleDO>()
+//                .likeIfPresent(ExampleDO::getName, reqVO.getName())
+//                .eqIfPresent(ExampleDO::getCategoryId, reqVO.getCategoryId())
+//                .eqIfPresent(ExampleDO::getAvatar, reqVO.getAvatar())
+//                .eqIfPresent(ExampleDO::getCarousel, reqVO.getCarousel())
+//                .eqIfPresent(ExampleDO::getContent, reqVO.getContent())
+//                .eqIfPresent(ExampleDO::getSort, reqVO.getSort())
+//                .eqIfPresent(ExampleDO::getIndexFlag, reqVO.getIndexFlag())
+//                .eqIfPresent(ExampleDO::getIndexSort, reqVO.getIndexSort())
+//                .orderByDesc(ExampleDO::getId));
+        return selectPage(reqVO,null);
     }
 
     default List<ExampleDO> selectList(ExampleExportReqVO reqVO) {
-        return selectList(new LambdaQueryWrapperX<ExampleDO>()
-                .likeIfPresent(ExampleDO::getName, reqVO.getName())
-                .eqIfPresent(ExampleDO::getCategoryId, reqVO.getCategoryId())
-                .eqIfPresent(ExampleDO::getAvatar, reqVO.getAvatar())
-                .eqIfPresent(ExampleDO::getCarousel, reqVO.getCarousel())
-                .eqIfPresent(ExampleDO::getContent, reqVO.getContent())
-                .eqIfPresent(ExampleDO::getSort, reqVO.getSort())
-                .eqIfPresent(ExampleDO::getIndexFlag, reqVO.getIndexFlag())
-                .eqIfPresent(ExampleDO::getIndexSort, reqVO.getIndexSort())
-                .orderByDesc(ExampleDO::getId));
+//        return selectList(new LambdaQueryWrapperX<ExampleDO>()
+//                .likeIfPresent(ExampleDO::getName, reqVO.getName())
+//                .eqIfPresent(ExampleDO::getCategoryId, reqVO.getCategoryId())
+//                .eqIfPresent(ExampleDO::getAvatar, reqVO.getAvatar())
+//                .eqIfPresent(ExampleDO::getCarousel, reqVO.getCarousel())
+//                .eqIfPresent(ExampleDO::getContent, reqVO.getContent())
+//                .eqIfPresent(ExampleDO::getSort, reqVO.getSort())
+//                .eqIfPresent(ExampleDO::getIndexFlag, reqVO.getIndexFlag())
+//                .eqIfPresent(ExampleDO::getIndexSort, reqVO.getIndexSort())
+//                .orderByDesc(ExampleDO::getId));
+        return selectList();
     }
 
 }
