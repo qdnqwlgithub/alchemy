@@ -38,15 +38,12 @@ public class ExampleExcelVO {
     private String sort;
 
     @ExcelProperty("是否展示到首页")
-    private Boolean indexFlag;
+    private String indexFlag;
 
-    @ExcelProperty("创建者")
-    private String createBy;
+    @ExcelProperty("index排序")
+    private String indexSort;
 
     @ExcelProperty("创建时间")
     private LocalDateTime createTime;
-
-    @ExcelProperty("更新者")
-    private String updateBy;
 
 }

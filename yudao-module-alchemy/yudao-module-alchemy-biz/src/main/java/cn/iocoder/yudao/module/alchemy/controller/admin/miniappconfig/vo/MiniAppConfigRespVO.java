@@ -10,10 +10,10 @@ import java.time.LocalDateTime;
 @ToString(callSuper = true)
 public class MiniAppConfigRespVO extends MiniAppConfigBaseVO {
 
-    @Schema(description = "小程序配置ID", required = true, example = "6568")
+    @Schema(description = "小程序配置ID", required = true, example = "1648")
     private Long id;
 
-    @Schema(description = "创建时间")
+    @Schema(description = "创建时间", required = true)
     private LocalDateTime createTime;
 
 }

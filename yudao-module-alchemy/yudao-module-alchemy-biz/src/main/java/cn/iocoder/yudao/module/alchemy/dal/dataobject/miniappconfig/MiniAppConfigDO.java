@@ -32,7 +32,7 @@ public class MiniAppConfigDO extends BaseDO {
      */
     private String headImg;
     /**
-     * 首页轮播
+     * 轮播图地址
      */
     private String carousel;
     /**
@@ -44,7 +44,7 @@ public class MiniAppConfigDO extends BaseDO {
      */
     private String companyName;
     /**
-     * 轮播图地址
+     * 公司地址
      */
     private String address;
     /**
@@ -59,13 +59,5 @@ public class MiniAppConfigDO extends BaseDO {
      * 地图坐标
      */
     private String position;
-    /**
-     * 创建者
-     */
-    private String createBy;
-    /**
-     * 更新者
-     */
-    private String updateBy;
 
 }

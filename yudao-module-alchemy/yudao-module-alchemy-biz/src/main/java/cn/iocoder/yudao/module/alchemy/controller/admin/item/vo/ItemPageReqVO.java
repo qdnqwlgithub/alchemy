@@ -22,7 +22,7 @@ public class ItemPageReqVO extends PageParam {
     private String intro;
 
     @Schema(description = "所属分类id", example = "28312")
-    private Long cId;
+    private Long categoryId;
 
     @Schema(description = "头像地址")
     private String avatar;

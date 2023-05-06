@@ -11,7 +11,7 @@ import javax.validation.constraints.*;
 @ToString(callSuper = true)
 public class MiniAppConfigUpdateReqVO extends MiniAppConfigBaseVO {
 
-    @Schema(description = "小程序配置ID", required = true, example = "6568")
+    @Schema(description = "小程序配置ID", required = true, example = "1648")
     @NotNull(message = "小程序配置ID不能为空")
     private Long id;
 

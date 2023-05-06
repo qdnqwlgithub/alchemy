@@ -23,7 +23,7 @@ public class CategoryExportReqVO {
     private Long parentId;
 
     @Schema(description = "浏览量")
-    private Long viewNum;
+    private String viewNum;
 
     @Schema(description = "显示顺序")
     private String sort;

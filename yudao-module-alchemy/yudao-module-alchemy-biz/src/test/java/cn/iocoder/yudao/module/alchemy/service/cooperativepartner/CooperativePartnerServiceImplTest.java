@@ -113,9 +113,7 @@ public class CooperativePartnerServiceImplTest extends BaseDbUnitTest {
            o.setName(null);
            o.setAvatar(null);
            o.setSort(null);
-           o.setCreateBy(null);
            o.setCreateTime(null);
-           o.setUpdateBy(null);
        });
        cooperativePartnerMapper.insert(dbCooperativePartner);
        // 测试 name 不匹配
@@ -124,20 +122,14 @@ public class CooperativePartnerServiceImplTest extends BaseDbUnitTest {
        cooperativePartnerMapper.insert(cloneIgnoreId(dbCooperativePartner, o -> o.setAvatar(null)));
        // 测试 sort 不匹配
        cooperativePartnerMapper.insert(cloneIgnoreId(dbCooperativePartner, o -> o.setSort(null)));
-       // 测试 createBy 不匹配
-       cooperativePartnerMapper.insert(cloneIgnoreId(dbCooperativePartner, o -> o.setCreateBy(null)));
        // 测试 createTime 不匹配
        cooperativePartnerMapper.insert(cloneIgnoreId(dbCooperativePartner, o -> o.setCreateTime(null)));
-       // 测试 updateBy 不匹配
-       cooperativePartnerMapper.insert(cloneIgnoreId(dbCooperativePartner, o -> o.setUpdateBy(null)));
        // 准备参数
        CooperativePartnerPageReqVO reqVO = new CooperativePartnerPageReqVO();
        reqVO.setName(null);
        reqVO.setAvatar(null);
        reqVO.setSort(null);
-       reqVO.setCreateBy(null);
        reqVO.setCreateTime(buildBetweenTime(2023, 2, 1, 2023, 2, 28));
-       reqVO.setUpdateBy(null);
 
        // 调用
        PageResult<CooperativePartnerDO> pageResult = cooperativePartnerService.getCooperativePartnerPage(reqVO);
@@ -155,9 +147,7 @@ public class CooperativePartnerServiceImplTest extends BaseDbUnitTest {
            o.setName(null);
            o.setAvatar(null);
            o.setSort(null);
-           o.setCreateBy(null);
            o.setCreateTime(null);
-           o.setUpdateBy(null);
        });
        cooperativePartnerMapper.insert(dbCooperativePartner);
        // 测试 name 不匹配
@@ -166,20 +156,14 @@ public class CooperativePartnerServiceImplTest extends BaseDbUnitTest {
        cooperativePartnerMapper.insert(cloneIgnoreId(dbCooperativePartner, o -> o.setAvatar(null)));
        // 测试 sort 不匹配
        cooperativePartnerMapper.insert(cloneIgnoreId(dbCooperativePartner, o -> o.setSort(null)));
-       // 测试 createBy 不匹配
-       cooperativePartnerMapper.insert(cloneIgnoreId(dbCooperativePartner, o -> o.setCreateBy(null)));
        // 测试 createTime 不匹配
        cooperativePartnerMapper.insert(cloneIgnoreId(dbCooperativePartner, o -> o.setCreateTime(null)));
-       // 测试 updateBy 不匹配
-       cooperativePartnerMapper.insert(cloneIgnoreId(dbCooperativePartner, o -> o.setUpdateBy(null)));
        // 准备参数
        CooperativePartnerExportReqVO reqVO = new CooperativePartnerExportReqVO();
        reqVO.setName(null);
        reqVO.setAvatar(null);
        reqVO.setSort(null);
-       reqVO.setCreateBy(null);
        reqVO.setCreateTime(buildBetweenTime(2023, 2, 1, 2023, 2, 28));
-       reqVO.setUpdateBy(null);
 
        // 调用
        List<CooperativePartnerDO> list = cooperativePartnerService.getCooperativePartnerList(reqVO);

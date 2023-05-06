@@ -15,7 +15,7 @@ import static cn.iocoder.yudao.framework.common.util.date.DateUtils.FORMAT_YEAR_
 @ToString(callSuper = true)
 public class CooperativePartnerPageReqVO extends PageParam {
 
-    @Schema(description = "合作伙伴名称", example = "赵六")
+    @Schema(description = "合作伙伴名称", example = "李四")
     private String name;
 
     @Schema(description = "封面图")
@@ -24,14 +24,8 @@ public class CooperativePartnerPageReqVO extends PageParam {
     @Schema(description = "显示顺序")
     private String sort;
 
-    @Schema(description = "创建者")
-    private String createBy;
-
     @Schema(description = "创建时间")
     @DateTimeFormat(pattern = FORMAT_YEAR_MONTH_DAY_HOUR_MINUTE_SECOND)
     private LocalDateTime[] createTime;
-
-    @Schema(description = "更新者")
-    private String updateBy;
 
 }

@@ -42,7 +42,7 @@ public class CategoryDO extends BaseDO {
     /**
      * 浏览量
      */
-    private Long viewNum;
+    private String viewNum;
     /**
      * 显示顺序
      */

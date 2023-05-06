@@ -38,6 +38,10 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public void updateCategory(CategoryUpdateReqVO updateReqVO) {
+        if(updateReqVO.getParentId().equals(updateReqVO.getId())){
+            throw exception(CATEGORY_PARENT_NODE_EXCEPTION);
+        }
+
         // 校验存在
         validateCategoryExists(updateReqVO.getId());
         // 更新

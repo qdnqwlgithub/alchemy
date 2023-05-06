@@ -10,10 +10,10 @@ import java.time.LocalDateTime;
 @ToString(callSuper = true)
 public class ExampleRespVO extends ExampleBaseVO {
 
-    @Schema(description = "案例ID", required = true, example = "8462")
+    @Schema(description = "案例ID", required = true, example = "4970")
     private Long id;
 
-    @Schema(description = "创建时间")
+    @Schema(description = "创建时间", required = true)
     private LocalDateTime createTime;
 
 }

@@ -14,11 +14,11 @@ import javax.validation.constraints.*;
 @Data
 public class ExampleBaseVO {
 
-    @Schema(description = "案例名称", required = true, example = "芋艿")
+    @Schema(description = "案例名称", required = true, example = "王五")
     @NotNull(message = "案例名称不能为空")
     private String name;
 
-    @Schema(description = "所属分类", required = true, example = "29393")
+    @Schema(description = "所属分类", required = true, example = "2625")
     @NotNull(message = "所属分类不能为空")
     private Integer categoryId;
 
@@ -38,14 +38,10 @@ public class ExampleBaseVO {
     @NotNull(message = "显示顺序不能为空")
     private String sort;
 
-    @Schema(description = "是否展示到首页", required = true)
-    @NotNull(message = "是否展示到首页不能为空")
-    private Boolean indexFlag;
+    @Schema(description = "是否展示到首页")
+    private String indexFlag;
 
-    @Schema(description = "创建者")
-    private String createBy;
-
-    @Schema(description = "更新者")
-    private String updateBy;
+    @Schema(description = "index排序")
+    private String indexSort;
 
 }

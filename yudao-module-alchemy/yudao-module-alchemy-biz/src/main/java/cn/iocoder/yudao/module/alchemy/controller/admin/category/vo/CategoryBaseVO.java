@@ -2,9 +2,7 @@ package cn.iocoder.yudao.module.alchemy.controller.admin.category.vo;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
-import java.util.*;
-import java.time.LocalDateTime;
-import java.time.LocalDateTime;
+
 import javax.validation.constraints.*;
 
 /**
@@ -15,19 +13,19 @@ import javax.validation.constraints.*;
 public class CategoryBaseVO {
 
     @Schema(description = "分类名称")
-    private String name;
+    private I18Str name;
 
     @Schema(description = "头像地址")
-    private String avatar;
+    private I18Str avatar;
 
     @Schema(description = "父分类id")
     private Long parentId;
 
     @Schema(description = "浏览量", required = true)
     @NotNull(message = "浏览量不能为空")
-    private Long viewNum;
+    private I18Lon viewNum;
 
     @Schema(description = "显示顺序")
-    private String sort;
+    private I18Lon sort;
 
 }

@@ -54,14 +54,10 @@ public class ExampleDO extends BaseDO {
     /**
      * 是否展示到首页
      */
-    private Boolean indexFlag;
+    private String indexFlag;
     /**
-     * 创建者
+     * index排序
      */
-    private String createBy;
-    /**
-     * 更新者
-     */
-    private String updateBy;
+    private String indexSort;
 
 }

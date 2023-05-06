@@ -26,9 +26,7 @@ public interface ExampleMapper extends BaseMapperX<ExampleDO> {
                 .eqIfPresent(ExampleDO::getContent, reqVO.getContent())
                 .eqIfPresent(ExampleDO::getSort, reqVO.getSort())
                 .eqIfPresent(ExampleDO::getIndexFlag, reqVO.getIndexFlag())
-                .eqIfPresent(ExampleDO::getCreateBy, reqVO.getCreateBy())
-                .betweenIfPresent(ExampleDO::getCreateTime, reqVO.getCreateTime())
-                .eqIfPresent(ExampleDO::getUpdateBy, reqVO.getUpdateBy())
+                .eqIfPresent(ExampleDO::getIndexSort, reqVO.getIndexSort())
                 .orderByDesc(ExampleDO::getId));
     }
 
@@ -41,9 +39,7 @@ public interface ExampleMapper extends BaseMapperX<ExampleDO> {
                 .eqIfPresent(ExampleDO::getContent, reqVO.getContent())
                 .eqIfPresent(ExampleDO::getSort, reqVO.getSort())
                 .eqIfPresent(ExampleDO::getIndexFlag, reqVO.getIndexFlag())
-                .eqIfPresent(ExampleDO::getCreateBy, reqVO.getCreateBy())
-                .betweenIfPresent(ExampleDO::getCreateTime, reqVO.getCreateTime())
-                .eqIfPresent(ExampleDO::getUpdateBy, reqVO.getUpdateBy())
+                .eqIfPresent(ExampleDO::getIndexSort, reqVO.getIndexSort())
                 .orderByDesc(ExampleDO::getId));
     }
 

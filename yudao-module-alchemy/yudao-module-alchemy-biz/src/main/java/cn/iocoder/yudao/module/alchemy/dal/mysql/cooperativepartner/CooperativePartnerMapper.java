@@ -22,9 +22,7 @@ public interface CooperativePartnerMapper extends BaseMapperX<CooperativePartner
                 .likeIfPresent(CooperativePartnerDO::getName, reqVO.getName())
                 .eqIfPresent(CooperativePartnerDO::getAvatar, reqVO.getAvatar())
                 .eqIfPresent(CooperativePartnerDO::getSort, reqVO.getSort())
-                .eqIfPresent(CooperativePartnerDO::getCreateBy, reqVO.getCreateBy())
                 .betweenIfPresent(CooperativePartnerDO::getCreateTime, reqVO.getCreateTime())
-                .eqIfPresent(CooperativePartnerDO::getUpdateBy, reqVO.getUpdateBy())
                 .orderByDesc(CooperativePartnerDO::getId));
     }
 
@@ -33,9 +31,7 @@ public interface CooperativePartnerMapper extends BaseMapperX<CooperativePartner
                 .likeIfPresent(CooperativePartnerDO::getName, reqVO.getName())
                 .eqIfPresent(CooperativePartnerDO::getAvatar, reqVO.getAvatar())
                 .eqIfPresent(CooperativePartnerDO::getSort, reqVO.getSort())
-                .eqIfPresent(CooperativePartnerDO::getCreateBy, reqVO.getCreateBy())
                 .betweenIfPresent(CooperativePartnerDO::getCreateTime, reqVO.getCreateTime())
-                .eqIfPresent(CooperativePartnerDO::getUpdateBy, reqVO.getUpdateBy())
                 .orderByDesc(CooperativePartnerDO::getId));
     }
 

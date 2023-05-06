@@ -1,7 +1,11 @@
 package cn.iocoder.yudao.module.alchemy.service.category;
 
+import cn.iocoder.yudao.framework.common.util.json.JsonUtils;
+import cn.iocoder.yudao.framework.test.core.ut.BaseMockitoUnitTest;
+import cn.iocoder.yudao.module.alchemy.convert.category.CategoryConvert;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 import javax.annotation.Resource;
@@ -15,6 +19,10 @@ import cn.iocoder.yudao.framework.common.pojo.PageResult;
 
 import javax.annotation.Resource;
 import org.springframework.context.annotation.Import;
+import org.springframework.web.client.RestTemplate;
+
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.*;
 import java.time.LocalDateTime;
 
@@ -34,7 +42,7 @@ import static org.mockito.Mockito.*;
 * @author 芋道源码
 */
 @Import(CategoryServiceImpl.class)
-public class CategoryServiceImplTest extends BaseDbUnitTest {
+public class CategoryServiceImplTest extends BaseMockitoUnitTest {
 
     @Resource
     private CategoryServiceImpl categoryService;
@@ -147,6 +155,8 @@ public class CategoryServiceImplTest extends BaseDbUnitTest {
        assertPojoEquals(dbCategory, pageResult.getList().get(0));
     }
 
+
+
     @Test
     @Disabled  // TODO 请修改 null 为需要的值，然后删除 @Disabled 注解
     public void testGetCategoryList() {
@@ -187,5 +197,28 @@ public class CategoryServiceImplTest extends BaseDbUnitTest {
        assertEquals(1, list.size());
        assertPojoEquals(dbCategory, list.get(0));
     }
+
+    @Test
+    public void testMapperStruct() {
+        I18Str i18Str = new I18Str();
+        i18Str.setZh("中国");
+        i18Str.setEn("china");
+        I18Lon i18Lon = new I18Lon();
+        i18Lon.setZh(0L);
+        i18Lon.setEn(1L);
+        String s1 = JsonUtils.toJsonString(i18Str);
+        I18Str i18Str1 = JsonUtils.parseObject(s1, I18Str.class);
+        CategoryDO categoryDO = new CategoryDO();
+        categoryDO.setName(JsonUtils.toJsonString(i18Str));
+        categoryDO.setAvatar(JsonUtils.toJsonString(i18Str));
+        categoryDO.setSort(JsonUtils.toJsonString(i18Lon));
+        categoryDO.setViewNum(0L);
+        categoryDO.setParentId(0L);
+        CategoryRespVO categoryRespVO = CategoryConvert.INSTANCE.convert(categoryDO);
+        System.out.println(123);
+
+    }
+
+
 
 }

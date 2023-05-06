@@ -1,5 +1,6 @@
 package cn.iocoder.yudao.module.alchemy.controller.admin.miniappconfig;
 
+import cn.iocoder.yudao.framework.common.util.collection.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import org.springframework.validation.annotation.Validated;

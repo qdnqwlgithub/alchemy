@@ -11,7 +11,7 @@ import javax.validation.constraints.*;
 @ToString(callSuper = true)
 public class ExampleCategoryUpdateReqVO extends ExampleCategoryBaseVO {
 
-    @Schema(description = "案例分类ID", required = true, example = "1158")
+    @Schema(description = "案例分类ID", required = true, example = "26700")
     @NotNull(message = "案例分类ID不能为空")
     private Long id;
 

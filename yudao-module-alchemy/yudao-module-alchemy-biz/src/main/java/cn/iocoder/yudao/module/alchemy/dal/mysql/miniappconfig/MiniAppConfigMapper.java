@@ -18,35 +18,33 @@ import cn.iocoder.yudao.module.alchemy.controller.admin.miniappconfig.vo.*;
 public interface MiniAppConfigMapper extends BaseMapperX<MiniAppConfigDO> {
 
     default PageResult<MiniAppConfigDO> selectPage(MiniAppConfigPageReqVO reqVO) {
-        return selectPage(reqVO, new LambdaQueryWrapperX<MiniAppConfigDO>()
-                .eqIfPresent(MiniAppConfigDO::getHeadImg, reqVO.getHeadImg())
-                .eqIfPresent(MiniAppConfigDO::getCarousel, reqVO.getCarousel())
-                .eqIfPresent(MiniAppConfigDO::getIndexBottomImg, reqVO.getIndexBottomImg())
-                .likeIfPresent(MiniAppConfigDO::getCompanyName, reqVO.getCompanyName())
-                .eqIfPresent(MiniAppConfigDO::getAddress, reqVO.getAddress())
-                .eqIfPresent(MiniAppConfigDO::getPhoneNumber, reqVO.getPhoneNumber())
-                .eqIfPresent(MiniAppConfigDO::getEmail, reqVO.getEmail())
-                .eqIfPresent(MiniAppConfigDO::getPosition, reqVO.getPosition())
-                .eqIfPresent(MiniAppConfigDO::getCreateBy, reqVO.getCreateBy())
-                .betweenIfPresent(MiniAppConfigDO::getCreateTime, reqVO.getCreateTime())
-                .eqIfPresent(MiniAppConfigDO::getUpdateBy, reqVO.getUpdateBy())
-                .orderByDesc(MiniAppConfigDO::getId));
+//        return selectPage(reqVO, new LambdaQueryWrapperX<MiniAppConfigDO>()
+//                .eqIfPresent(MiniAppConfigDO::getHeadImg, reqVO.getHeadImg())
+//                .eqIfPresent(MiniAppConfigDO::getCarousel, reqVO.getCarousel())
+//                .eqIfPresent(MiniAppConfigDO::getIndexBottomImg, reqVO.getIndexBottomImg())
+//                .likeIfPresent(MiniAppConfigDO::getCompanyName, reqVO.getCompanyName())
+//                .eqIfPresent(MiniAppConfigDO::getAddress, reqVO.getAddress())
+//                .eqIfPresent(MiniAppConfigDO::getPhoneNumber, reqVO.getPhoneNumber())
+//                .eqIfPresent(MiniAppConfigDO::getEmail, reqVO.getEmail())
+//                .eqIfPresent(MiniAppConfigDO::getPosition, reqVO.getPosition())
+//                .betweenIfPresent(MiniAppConfigDO::getCreateTime, reqVO.getCreateTime())
+//                .orderByDesc(MiniAppConfigDO::getId));
+        return selectPage(reqVO, null);
     }
 
     default List<MiniAppConfigDO> selectList(MiniAppConfigExportReqVO reqVO) {
-        return selectList(new LambdaQueryWrapperX<MiniAppConfigDO>()
-                .eqIfPresent(MiniAppConfigDO::getHeadImg, reqVO.getHeadImg())
-                .eqIfPresent(MiniAppConfigDO::getCarousel, reqVO.getCarousel())
-                .eqIfPresent(MiniAppConfigDO::getIndexBottomImg, reqVO.getIndexBottomImg())
-                .likeIfPresent(MiniAppConfigDO::getCompanyName, reqVO.getCompanyName())
-                .eqIfPresent(MiniAppConfigDO::getAddress, reqVO.getAddress())
-                .eqIfPresent(MiniAppConfigDO::getPhoneNumber, reqVO.getPhoneNumber())
-                .eqIfPresent(MiniAppConfigDO::getEmail, reqVO.getEmail())
-                .eqIfPresent(MiniAppConfigDO::getPosition, reqVO.getPosition())
-                .eqIfPresent(MiniAppConfigDO::getCreateBy, reqVO.getCreateBy())
-                .betweenIfPresent(MiniAppConfigDO::getCreateTime, reqVO.getCreateTime())
-                .eqIfPresent(MiniAppConfigDO::getUpdateBy, reqVO.getUpdateBy())
-                .orderByDesc(MiniAppConfigDO::getId));
+//        return selectList(new LambdaQueryWrapperX<MiniAppConfigDO>()
+//                .eqIfPresent(MiniAppConfigDO::getHeadImg, reqVO.getHeadImg())
+//                .eqIfPresent(MiniAppConfigDO::getCarousel, reqVO.getCarousel())
+//                .eqIfPresent(MiniAppConfigDO::getIndexBottomImg, reqVO.getIndexBottomImg())
+//                .likeIfPresent(MiniAppConfigDO::getCompanyName, reqVO.getCompanyName())
+//                .eqIfPresent(MiniAppConfigDO::getAddress, reqVO.getAddress())
+//                .eqIfPresent(MiniAppConfigDO::getPhoneNumber, reqVO.getPhoneNumber())
+//                .eqIfPresent(MiniAppConfigDO::getEmail, reqVO.getEmail())
+//                .eqIfPresent(MiniAppConfigDO::getPosition, reqVO.getPosition())
+//                .betweenIfPresent(MiniAppConfigDO::getCreateTime, reqVO.getCreateTime())
+//                .orderByDesc(MiniAppConfigDO::getId));
+        return selectList();
     }
 
 }

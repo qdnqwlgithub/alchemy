@@ -21,9 +21,7 @@ public interface ExampleCategoryMapper extends BaseMapperX<ExampleCategoryDO> {
         return selectPage(reqVO, new LambdaQueryWrapperX<ExampleCategoryDO>()
                 .likeIfPresent(ExampleCategoryDO::getName, reqVO.getName())
                 .eqIfPresent(ExampleCategoryDO::getSort, reqVO.getSort())
-                .eqIfPresent(ExampleCategoryDO::getCreateBy, reqVO.getCreateBy())
                 .betweenIfPresent(ExampleCategoryDO::getCreateTime, reqVO.getCreateTime())
-                .eqIfPresent(ExampleCategoryDO::getUpdateBy, reqVO.getUpdateBy())
                 .orderByDesc(ExampleCategoryDO::getId));
     }
 
@@ -31,9 +29,7 @@ public interface ExampleCategoryMapper extends BaseMapperX<ExampleCategoryDO> {
         return selectList(new LambdaQueryWrapperX<ExampleCategoryDO>()
                 .likeIfPresent(ExampleCategoryDO::getName, reqVO.getName())
                 .eqIfPresent(ExampleCategoryDO::getSort, reqVO.getSort())
-                .eqIfPresent(ExampleCategoryDO::getCreateBy, reqVO.getCreateBy())
                 .betweenIfPresent(ExampleCategoryDO::getCreateTime, reqVO.getCreateTime())
-                .eqIfPresent(ExampleCategoryDO::getUpdateBy, reqVO.getUpdateBy())
                 .orderByDesc(ExampleCategoryDO::getId));
     }
 

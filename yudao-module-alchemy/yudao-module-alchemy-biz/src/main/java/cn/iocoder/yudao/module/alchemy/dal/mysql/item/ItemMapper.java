@@ -21,16 +21,16 @@ public interface ItemMapper extends BaseMapperX<ItemDO> {
         return selectPage(reqVO, new LambdaQueryWrapperX<ItemDO>()
                 .likeIfPresent(ItemDO::getName, reqVO.getName())
                 .eqIfPresent(ItemDO::getIntro, reqVO.getIntro())
-                .eqIfPresent(ItemDO::getCId, reqVO.getCId())
+                .eqIfPresent(ItemDO::getCategoryId, reqVO.getCategoryId())
                 .eqIfPresent(ItemDO::getAvatar, reqVO.getAvatar())
                 .eqIfPresent(ItemDO::getCarousel, reqVO.getCarousel())
                 .eqIfPresent(ItemDO::getContent, reqVO.getContent())
                 .eqIfPresent(ItemDO::getDoc, reqVO.getDoc())
                 .eqIfPresent(ItemDO::getViewNum, reqVO.getViewNum())
                 .eqIfPresent(ItemDO::getSort, reqVO.getSort())
-                .eqIfPresent(ItemDO::getCreateBy, reqVO.getCreateBy())
+                .eqIfPresent(ItemDO::getCreator, reqVO.getCreateBy())
                 .betweenIfPresent(ItemDO::getCreateTime, reqVO.getCreateTime())
-                .eqIfPresent(ItemDO::getUpdateBy, reqVO.getUpdateBy())
+                .eqIfPresent(ItemDO::getUpdater, reqVO.getUpdateBy())
                 .orderByDesc(ItemDO::getId));
     }
 
@@ -38,16 +38,16 @@ public interface ItemMapper extends BaseMapperX<ItemDO> {
         return selectList(new LambdaQueryWrapperX<ItemDO>()
                 .likeIfPresent(ItemDO::getName, reqVO.getName())
                 .eqIfPresent(ItemDO::getIntro, reqVO.getIntro())
-                .eqIfPresent(ItemDO::getCId, reqVO.getCId())
+                .eqIfPresent(ItemDO::getCategoryId, reqVO.getCategoryId())
                 .eqIfPresent(ItemDO::getAvatar, reqVO.getAvatar())
                 .eqIfPresent(ItemDO::getCarousel, reqVO.getCarousel())
                 .eqIfPresent(ItemDO::getContent, reqVO.getContent())
                 .eqIfPresent(ItemDO::getDoc, reqVO.getDoc())
                 .eqIfPresent(ItemDO::getViewNum, reqVO.getViewNum())
                 .eqIfPresent(ItemDO::getSort, reqVO.getSort())
-                .eqIfPresent(ItemDO::getCreateBy, reqVO.getCreateBy())
+                .eqIfPresent(ItemDO::getCreator, reqVO.getCreateBy())
                 .betweenIfPresent(ItemDO::getCreateTime, reqVO.getCreateTime())
-                .eqIfPresent(ItemDO::getUpdateBy, reqVO.getUpdateBy())
+                .eqIfPresent(ItemDO::getUpdater, reqVO.getUpdateBy())
                 .orderByDesc(ItemDO::getId));
     }
 

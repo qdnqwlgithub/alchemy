@@ -25,13 +25,7 @@ public class ExampleCategoryExcelVO {
     @ExcelProperty("显示顺序")
     private String sort;
 
-    @ExcelProperty("创建者")
-    private String createBy;
-
     @ExcelProperty("创建时间")
     private LocalDateTime createTime;
-
-    @ExcelProperty("更新者")
-    private String updateBy;
 
 }

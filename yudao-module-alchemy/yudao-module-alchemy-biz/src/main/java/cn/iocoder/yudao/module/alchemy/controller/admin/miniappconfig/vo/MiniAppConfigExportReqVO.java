@@ -16,16 +16,16 @@ public class MiniAppConfigExportReqVO {
     @Schema(description = "小程序顶部logo")
     private String headImg;
 
-    @Schema(description = "首页轮播")
+    @Schema(description = "轮播图地址")
     private String carousel;
 
     @Schema(description = "index页面底部图片")
     private String indexBottomImg;
 
-    @Schema(description = "公司名", example = "张三")
+    @Schema(description = "公司名", example = "赵六")
     private String companyName;
 
-    @Schema(description = "轮播图地址")
+    @Schema(description = "公司地址")
     private String address;
 
     @Schema(description = "电话号码")
@@ -37,14 +37,8 @@ public class MiniAppConfigExportReqVO {
     @Schema(description = "地图坐标")
     private String position;
 
-    @Schema(description = "创建者")
-    private String createBy;
-
     @Schema(description = "创建时间")
     @DateTimeFormat(pattern = FORMAT_YEAR_MONTH_DAY_HOUR_MINUTE_SECOND)
     private LocalDateTime[] createTime;
-
-    @Schema(description = "更新者")
-    private String updateBy;
 
 }

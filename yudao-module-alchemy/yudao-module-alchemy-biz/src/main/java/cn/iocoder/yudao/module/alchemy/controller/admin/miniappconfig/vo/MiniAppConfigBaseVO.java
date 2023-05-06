@@ -1,5 +1,6 @@
 package cn.iocoder.yudao.module.alchemy.controller.admin.miniappconfig.vo;
 
+import cn.iocoder.yudao.module.alchemy.controller.admin.category.vo.I18Str;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import java.util.*;
@@ -16,40 +17,34 @@ public class MiniAppConfigBaseVO {
 
     @Schema(description = "小程序顶部logo", required = true)
     @NotNull(message = "小程序顶部logo不能为空")
-    private String headImg;
-
-    @Schema(description = "首页轮播", required = true)
-    @NotNull(message = "首页轮播不能为空")
-    private String carousel;
-
-    @Schema(description = "index页面底部图片", required = true)
-    @NotNull(message = "index页面底部图片不能为空")
-    private String indexBottomImg;
-
-    @Schema(description = "公司名", required = true, example = "张三")
-    @NotNull(message = "公司名不能为空")
-    private String companyName;
+    private I18Str headImg;
 
     @Schema(description = "轮播图地址", required = true)
     @NotNull(message = "轮播图地址不能为空")
-    private String address;
+    private I18Str carousel;
+
+    @Schema(description = "index页面底部图片", required = true)
+    @NotNull(message = "index页面底部图片不能为空")
+    private I18Str indexBottomImg;
+
+    @Schema(description = "公司名", required = true, example = "赵六")
+    @NotNull(message = "公司名不能为空")
+    private I18Str companyName;
+
+    @Schema(description = "公司地址", required = true)
+    @NotNull(message = "公司地址不能为空")
+    private I18Str address;
 
     @Schema(description = "电话号码", required = true)
     @NotNull(message = "电话号码不能为空")
-    private String phoneNumber;
+    private I18Str phoneNumber;
 
     @Schema(description = "邮箱地址", required = true)
     @NotNull(message = "邮箱地址不能为空")
-    private String email;
+    private I18Str email;
 
     @Schema(description = "地图坐标", required = true)
     @NotNull(message = "地图坐标不能为空")
-    private String position;
-
-    @Schema(description = "创建者")
-    private String createBy;
-
-    @Schema(description = "更新者")
-    private String updateBy;
+    private I18Str position;
 
 }

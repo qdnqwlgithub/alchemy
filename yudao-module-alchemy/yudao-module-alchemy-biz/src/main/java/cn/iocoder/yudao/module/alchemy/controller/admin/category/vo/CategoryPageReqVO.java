@@ -16,19 +16,19 @@ import static cn.iocoder.yudao.framework.common.util.date.DateUtils.FORMAT_YEAR_
 public class CategoryPageReqVO extends PageParam {
 
     @Schema(description = "分类名称")
-    private String name;
+    private I18Str name;
 
     @Schema(description = "头像地址")
-    private String avatar;
+    private I18Str avatar;
 
     @Schema(description = "父分类id")
     private Long parentId;
 
     @Schema(description = "浏览量")
-    private Long viewNum;
+    private I18Lon viewNum;
 
     @Schema(description = "显示顺序")
-    private String sort;
+    private I18Lon sort;
 
     @Schema(description = "创建时间")
     @DateTimeFormat(pattern = FORMAT_YEAR_MONTH_DAY_HOUR_MINUTE_SECOND)

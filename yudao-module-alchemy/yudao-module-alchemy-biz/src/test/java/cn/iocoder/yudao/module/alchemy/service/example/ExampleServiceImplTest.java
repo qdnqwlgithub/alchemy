@@ -117,9 +117,7 @@ public class ExampleServiceImplTest extends BaseDbUnitTest {
            o.setContent(null);
            o.setSort(null);
            o.setIndexFlag(null);
-           o.setCreateBy(null);
-           o.setCreateTime(null);
-           o.setUpdateBy(null);
+           o.setIndexSort(null);
        });
        exampleMapper.insert(dbExample);
        // 测试 name 不匹配
@@ -136,12 +134,8 @@ public class ExampleServiceImplTest extends BaseDbUnitTest {
        exampleMapper.insert(cloneIgnoreId(dbExample, o -> o.setSort(null)));
        // 测试 indexFlag 不匹配
        exampleMapper.insert(cloneIgnoreId(dbExample, o -> o.setIndexFlag(null)));
-       // 测试 createBy 不匹配
-       exampleMapper.insert(cloneIgnoreId(dbExample, o -> o.setCreateBy(null)));
-       // 测试 createTime 不匹配
-       exampleMapper.insert(cloneIgnoreId(dbExample, o -> o.setCreateTime(null)));
-       // 测试 updateBy 不匹配
-       exampleMapper.insert(cloneIgnoreId(dbExample, o -> o.setUpdateBy(null)));
+       // 测试 indexSort 不匹配
+       exampleMapper.insert(cloneIgnoreId(dbExample, o -> o.setIndexSort(null)));
        // 准备参数
        ExamplePageReqVO reqVO = new ExamplePageReqVO();
        reqVO.setName(null);
@@ -151,9 +145,7 @@ public class ExampleServiceImplTest extends BaseDbUnitTest {
        reqVO.setContent(null);
        reqVO.setSort(null);
        reqVO.setIndexFlag(null);
-       reqVO.setCreateBy(null);
-       reqVO.setCreateTime(buildBetweenTime(2023, 2, 1, 2023, 2, 28));
-       reqVO.setUpdateBy(null);
+       reqVO.setIndexSort(null);
 
        // 调用
        PageResult<ExampleDO> pageResult = exampleService.getExamplePage(reqVO);
@@ -175,9 +167,7 @@ public class ExampleServiceImplTest extends BaseDbUnitTest {
            o.setContent(null);
            o.setSort(null);
            o.setIndexFlag(null);
-           o.setCreateBy(null);
-           o.setCreateTime(null);
-           o.setUpdateBy(null);
+           o.setIndexSort(null);
        });
        exampleMapper.insert(dbExample);
        // 测试 name 不匹配
@@ -194,12 +184,8 @@ public class ExampleServiceImplTest extends BaseDbUnitTest {
        exampleMapper.insert(cloneIgnoreId(dbExample, o -> o.setSort(null)));
        // 测试 indexFlag 不匹配
        exampleMapper.insert(cloneIgnoreId(dbExample, o -> o.setIndexFlag(null)));
-       // 测试 createBy 不匹配
-       exampleMapper.insert(cloneIgnoreId(dbExample, o -> o.setCreateBy(null)));
-       // 测试 createTime 不匹配
-       exampleMapper.insert(cloneIgnoreId(dbExample, o -> o.setCreateTime(null)));
-       // 测试 updateBy 不匹配
-       exampleMapper.insert(cloneIgnoreId(dbExample, o -> o.setUpdateBy(null)));
+       // 测试 indexSort 不匹配
+       exampleMapper.insert(cloneIgnoreId(dbExample, o -> o.setIndexSort(null)));
        // 准备参数
        ExampleExportReqVO reqVO = new ExampleExportReqVO();
        reqVO.setName(null);
@@ -209,9 +195,7 @@ public class ExampleServiceImplTest extends BaseDbUnitTest {
        reqVO.setContent(null);
        reqVO.setSort(null);
        reqVO.setIndexFlag(null);
-       reqVO.setCreateBy(null);
-       reqVO.setCreateTime(buildBetweenTime(2023, 2, 1, 2023, 2, 28));
-       reqVO.setUpdateBy(null);
+       reqVO.setIndexSort(null);
 
        // 调用
        List<ExampleDO> list = exampleService.getExampleList(reqVO);

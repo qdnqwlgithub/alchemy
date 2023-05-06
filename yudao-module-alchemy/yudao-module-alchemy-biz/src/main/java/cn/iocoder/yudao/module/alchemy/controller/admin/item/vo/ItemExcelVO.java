@@ -26,7 +26,7 @@ public class ItemExcelVO {
     private String intro;
 
     @ExcelProperty("所属分类id")
-    private Long cId;
+    private Long categoryId;
 
     @ExcelProperty("头像地址")
     private String avatar;

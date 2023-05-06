@@ -10,10 +10,10 @@ import java.time.LocalDateTime;
 @ToString(callSuper = true)
 public class CooperativePartnerRespVO extends CooperativePartnerBaseVO {
 
-    @Schema(description = "合作伙伴ID", required = true, example = "25591")
+    @Schema(description = "合作伙伴ID", required = true, example = "2414")
     private Long id;
 
-    @Schema(description = "创建时间")
+    @Schema(description = "创建时间", required = true)
     private LocalDateTime createTime;
 
 }

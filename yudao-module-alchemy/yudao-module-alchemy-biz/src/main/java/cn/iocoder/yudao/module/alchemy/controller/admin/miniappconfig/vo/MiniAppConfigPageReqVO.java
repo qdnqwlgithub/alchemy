@@ -1,5 +1,6 @@
 package cn.iocoder.yudao.module.alchemy.controller.admin.miniappconfig.vo;
 
+import cn.iocoder.yudao.module.alchemy.controller.admin.category.vo.I18Str;
 import lombok.*;
 import java.util.*;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -16,37 +17,31 @@ import static cn.iocoder.yudao.framework.common.util.date.DateUtils.FORMAT_YEAR_
 public class MiniAppConfigPageReqVO extends PageParam {
 
     @Schema(description = "小程序顶部logo")
-    private String headImg;
-
-    @Schema(description = "首页轮播")
-    private String carousel;
-
-    @Schema(description = "index页面底部图片")
-    private String indexBottomImg;
-
-    @Schema(description = "公司名", example = "张三")
-    private String companyName;
+    private I18Str headImg;
 
     @Schema(description = "轮播图地址")
-    private String address;
+    private I18Str carousel;
+
+    @Schema(description = "index页面底部图片")
+    private I18Str indexBottomImg;
+
+    @Schema(description = "公司名", example = "赵六")
+    private I18Str companyName;
+
+    @Schema(description = "公司地址")
+    private I18Str address;
 
     @Schema(description = "电话号码")
-    private String phoneNumber;
+    private I18Str phoneNumber;
 
     @Schema(description = "邮箱地址")
-    private String email;
+    private I18Str email;
 
     @Schema(description = "地图坐标")
-    private String position;
-
-    @Schema(description = "创建者")
-    private String createBy;
+    private I18Str position;
 
     @Schema(description = "创建时间")
     @DateTimeFormat(pattern = FORMAT_YEAR_MONTH_DAY_HOUR_MINUTE_SECOND)
     private LocalDateTime[] createTime;
-
-    @Schema(description = "更新者")
-    private String updateBy;
 
 }

@@ -1,5 +1,7 @@
 package cn.iocoder.yudao.module.alchemy.controller.admin.item.vo;
 
+import cn.iocoder.yudao.module.alchemy.controller.admin.category.vo.I18Lon;
+import cn.iocoder.yudao.module.alchemy.controller.admin.category.vo.I18Str;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import java.util.*;
@@ -16,40 +18,40 @@ public class ItemBaseVO {
 
     @Schema(description = "元素名称", required = true, example = "张三")
     @NotNull(message = "元素名称不能为空")
-    private String name;
+    private I18Str name;
 
     @Schema(description = "元素简介", required = true)
     @NotNull(message = "元素简介不能为空")
-    private String intro;
+    private I18Str intro;
 
     @Schema(description = "所属分类id", required = true, example = "28312")
     @NotNull(message = "所属分类id不能为空")
-    private Long cId;
+    private Long categoryId;
 
     @Schema(description = "头像地址")
-    private String avatar;
+    private I18Str avatar;
 
     @Schema(description = "轮播图地址")
-    private String carousel;
+    private I18Str carousel;
 
     @Schema(description = "元素详情")
-    private String content;
+    private I18Str content;
 
     @Schema(description = "产品手册")
-    private String doc;
+    private I18Str doc;
 
     @Schema(description = "浏览量", required = true)
     @NotNull(message = "浏览量不能为空")
-    private Long viewNum;
+    private I18Lon viewNum;
 
     @Schema(description = "显示顺序", required = true)
     @NotNull(message = "显示顺序不能为空")
-    private String sort;
+    private I18Lon sort;
 
     @Schema(description = "创建者")
-    private String createBy;
+    private String creator;
 
     @Schema(description = "更新者")
-    private String updateBy;
+    private String updater;
 
 }

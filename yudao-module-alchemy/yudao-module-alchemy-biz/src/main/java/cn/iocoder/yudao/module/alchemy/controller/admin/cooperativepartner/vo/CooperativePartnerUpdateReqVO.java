@@ -11,7 +11,7 @@ import javax.validation.constraints.*;
 @ToString(callSuper = true)
 public class CooperativePartnerUpdateReqVO extends CooperativePartnerBaseVO {
 
-    @Schema(description = "合作伙伴ID", required = true, example = "25591")
+    @Schema(description = "合作伙伴ID", required = true, example = "2414")
     @NotNull(message = "合作伙伴ID不能为空")
     private Long id;
 

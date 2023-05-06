@@ -21,14 +21,8 @@ public class ExampleCategoryPageReqVO extends PageParam {
     @Schema(description = "显示顺序")
     private String sort;
 
-    @Schema(description = "创建者")
-    private String createBy;
-
     @Schema(description = "创建时间")
     @DateTimeFormat(pattern = FORMAT_YEAR_MONTH_DAY_HOUR_MINUTE_SECOND)
     private LocalDateTime[] createTime;
-
-    @Schema(description = "更新者")
-    private String updateBy;
 
 }

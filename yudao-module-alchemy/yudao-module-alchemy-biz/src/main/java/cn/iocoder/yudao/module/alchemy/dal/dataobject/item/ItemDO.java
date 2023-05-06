@@ -38,7 +38,7 @@ public class ItemDO extends BaseDO {
     /**
      * 所属分类id
      */
-    private Long cId;
+    private Long categoryId;
     /**
      * 头像地址
      */
@@ -58,7 +58,7 @@ public class ItemDO extends BaseDO {
     /**
      * 浏览量
      */
-    private Long viewNum;
+    private String viewNum;
     /**
      * 显示顺序
      */
@@ -66,10 +66,10 @@ public class ItemDO extends BaseDO {
     /**
      * 创建者
      */
-    private String createBy;
+    private String creator;
     /**
      * 更新者
      */
-    private String updateBy;
+    private String updater;
 
 }

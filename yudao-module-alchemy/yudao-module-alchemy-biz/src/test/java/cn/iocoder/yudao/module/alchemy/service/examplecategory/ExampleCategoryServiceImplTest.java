@@ -112,28 +112,20 @@ public class ExampleCategoryServiceImplTest extends BaseDbUnitTest {
        ExampleCategoryDO dbExampleCategory = randomPojo(ExampleCategoryDO.class, o -> { // 等会查询到
            o.setName(null);
            o.setSort(null);
-           o.setCreateBy(null);
            o.setCreateTime(null);
-           o.setUpdateBy(null);
        });
        exampleCategoryMapper.insert(dbExampleCategory);
        // 测试 name 不匹配
        exampleCategoryMapper.insert(cloneIgnoreId(dbExampleCategory, o -> o.setName(null)));
        // 测试 sort 不匹配
        exampleCategoryMapper.insert(cloneIgnoreId(dbExampleCategory, o -> o.setSort(null)));
-       // 测试 createBy 不匹配
-       exampleCategoryMapper.insert(cloneIgnoreId(dbExampleCategory, o -> o.setCreateBy(null)));
        // 测试 createTime 不匹配
        exampleCategoryMapper.insert(cloneIgnoreId(dbExampleCategory, o -> o.setCreateTime(null)));
-       // 测试 updateBy 不匹配
-       exampleCategoryMapper.insert(cloneIgnoreId(dbExampleCategory, o -> o.setUpdateBy(null)));
        // 准备参数
        ExampleCategoryPageReqVO reqVO = new ExampleCategoryPageReqVO();
        reqVO.setName(null);
        reqVO.setSort(null);
-       reqVO.setCreateBy(null);
        reqVO.setCreateTime(buildBetweenTime(2023, 2, 1, 2023, 2, 28));
-       reqVO.setUpdateBy(null);
 
        // 调用
        PageResult<ExampleCategoryDO> pageResult = exampleCategoryService.getExampleCategoryPage(reqVO);
@@ -150,28 +142,20 @@ public class ExampleCategoryServiceImplTest extends BaseDbUnitTest {
        ExampleCategoryDO dbExampleCategory = randomPojo(ExampleCategoryDO.class, o -> { // 等会查询到
            o.setName(null);
            o.setSort(null);
-           o.setCreateBy(null);
            o.setCreateTime(null);
-           o.setUpdateBy(null);
        });
        exampleCategoryMapper.insert(dbExampleCategory);
        // 测试 name 不匹配
        exampleCategoryMapper.insert(cloneIgnoreId(dbExampleCategory, o -> o.setName(null)));
        // 测试 sort 不匹配
        exampleCategoryMapper.insert(cloneIgnoreId(dbExampleCategory, o -> o.setSort(null)));
-       // 测试 createBy 不匹配
-       exampleCategoryMapper.insert(cloneIgnoreId(dbExampleCategory, o -> o.setCreateBy(null)));
        // 测试 createTime 不匹配
        exampleCategoryMapper.insert(cloneIgnoreId(dbExampleCategory, o -> o.setCreateTime(null)));
-       // 测试 updateBy 不匹配
-       exampleCategoryMapper.insert(cloneIgnoreId(dbExampleCategory, o -> o.setUpdateBy(null)));
        // 准备参数
        ExampleCategoryExportReqVO reqVO = new ExampleCategoryExportReqVO();
        reqVO.setName(null);
        reqVO.setSort(null);
-       reqVO.setCreateBy(null);
        reqVO.setCreateTime(buildBetweenTime(2023, 2, 1, 2023, 2, 28));
-       reqVO.setUpdateBy(null);
 
        // 调用
        List<ExampleCategoryDO> list = exampleCategoryService.getExampleCategoryList(reqVO);

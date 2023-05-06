@@ -22,10 +22,4 @@ public class ExampleCategoryBaseVO {
     @NotNull(message = "显示顺序不能为空")
     private String sort;
 
-    @Schema(description = "创建者")
-    private String createBy;
-
-    @Schema(description = "更新者")
-    private String updateBy;
-
 }

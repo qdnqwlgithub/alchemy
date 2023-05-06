@@ -22,7 +22,7 @@ public class MiniAppConfigExcelVO {
     @ExcelProperty("小程序顶部logo")
     private String headImg;
 
-    @ExcelProperty("首页轮播")
+    @ExcelProperty("轮播图地址")
     private String carousel;
 
     @ExcelProperty("index页面底部图片")
@@ -31,7 +31,7 @@ public class MiniAppConfigExcelVO {
     @ExcelProperty("公司名")
     private String companyName;
 
-    @ExcelProperty("轮播图地址")
+    @ExcelProperty("公司地址")
     private String address;
 
     @ExcelProperty("电话号码")
@@ -43,13 +43,7 @@ public class MiniAppConfigExcelVO {
     @ExcelProperty("地图坐标")
     private String position;
 
-    @ExcelProperty("创建者")
-    private String createBy;
-
     @ExcelProperty("创建时间")
     private LocalDateTime createTime;
-
-    @ExcelProperty("更新者")
-    private String updateBy;
 
 }

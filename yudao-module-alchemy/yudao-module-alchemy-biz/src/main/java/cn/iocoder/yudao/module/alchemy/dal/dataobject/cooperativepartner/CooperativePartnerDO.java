@@ -39,13 +39,5 @@ public class CooperativePartnerDO extends BaseDO {
      * 显示顺序
      */
     private String sort;
-    /**
-     * 创建者
-     */
-    private String createBy;
-    /**
-     * 更新者
-     */
-    private String updateBy;
 
 }

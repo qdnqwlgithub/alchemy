@@ -29,7 +29,7 @@ public class CategoryExcelVO {
     private Long parentId;
 
     @ExcelProperty("浏览量")
-    private Long viewNum;
+    private String viewNum;
 
     @ExcelProperty("显示顺序")
     private String sort;

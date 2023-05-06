@@ -118,9 +118,7 @@ public class MiniAppConfigServiceImplTest extends BaseDbUnitTest {
            o.setPhoneNumber(null);
            o.setEmail(null);
            o.setPosition(null);
-           o.setCreateBy(null);
            o.setCreateTime(null);
-           o.setUpdateBy(null);
        });
        miniAppConfigMapper.insert(dbMiniAppConfig);
        // 测试 headImg 不匹配
@@ -139,12 +137,8 @@ public class MiniAppConfigServiceImplTest extends BaseDbUnitTest {
        miniAppConfigMapper.insert(cloneIgnoreId(dbMiniAppConfig, o -> o.setEmail(null)));
        // 测试 position 不匹配
        miniAppConfigMapper.insert(cloneIgnoreId(dbMiniAppConfig, o -> o.setPosition(null)));
-       // 测试 createBy 不匹配
-       miniAppConfigMapper.insert(cloneIgnoreId(dbMiniAppConfig, o -> o.setCreateBy(null)));
        // 测试 createTime 不匹配
        miniAppConfigMapper.insert(cloneIgnoreId(dbMiniAppConfig, o -> o.setCreateTime(null)));
-       // 测试 updateBy 不匹配
-       miniAppConfigMapper.insert(cloneIgnoreId(dbMiniAppConfig, o -> o.setUpdateBy(null)));
        // 准备参数
        MiniAppConfigPageReqVO reqVO = new MiniAppConfigPageReqVO();
        reqVO.setHeadImg(null);
@@ -155,9 +149,7 @@ public class MiniAppConfigServiceImplTest extends BaseDbUnitTest {
        reqVO.setPhoneNumber(null);
        reqVO.setEmail(null);
        reqVO.setPosition(null);
-       reqVO.setCreateBy(null);
        reqVO.setCreateTime(buildBetweenTime(2023, 2, 1, 2023, 2, 28));
-       reqVO.setUpdateBy(null);
 
        // 调用
        PageResult<MiniAppConfigDO> pageResult = miniAppConfigService.getMiniAppConfigPage(reqVO);
@@ -180,9 +172,7 @@ public class MiniAppConfigServiceImplTest extends BaseDbUnitTest {
            o.setPhoneNumber(null);
            o.setEmail(null);
            o.setPosition(null);
-           o.setCreateBy(null);
            o.setCreateTime(null);
-           o.setUpdateBy(null);
        });
        miniAppConfigMapper.insert(dbMiniAppConfig);
        // 测试 headImg 不匹配
@@ -201,12 +191,8 @@ public class MiniAppConfigServiceImplTest extends BaseDbUnitTest {
        miniAppConfigMapper.insert(cloneIgnoreId(dbMiniAppConfig, o -> o.setEmail(null)));
        // 测试 position 不匹配
        miniAppConfigMapper.insert(cloneIgnoreId(dbMiniAppConfig, o -> o.setPosition(null)));
-       // 测试 createBy 不匹配
-       miniAppConfigMapper.insert(cloneIgnoreId(dbMiniAppConfig, o -> o.setCreateBy(null)));
        // 测试 createTime 不匹配
        miniAppConfigMapper.insert(cloneIgnoreId(dbMiniAppConfig, o -> o.setCreateTime(null)));
-       // 测试 updateBy 不匹配
-       miniAppConfigMapper.insert(cloneIgnoreId(dbMiniAppConfig, o -> o.setUpdateBy(null)));
        // 准备参数
        MiniAppConfigExportReqVO reqVO = new MiniAppConfigExportReqVO();
        reqVO.setHeadImg(null);
@@ -217,9 +203,7 @@ public class MiniAppConfigServiceImplTest extends BaseDbUnitTest {
        reqVO.setPhoneNumber(null);
        reqVO.setEmail(null);
        reqVO.setPosition(null);
-       reqVO.setCreateBy(null);
        reqVO.setCreateTime(buildBetweenTime(2023, 2, 1, 2023, 2, 28));
-       reqVO.setUpdateBy(null);
 
        // 调用
        List<MiniAppConfigDO> list = miniAppConfigService.getMiniAppConfigList(reqVO);

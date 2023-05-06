@@ -4,19 +4,15 @@ import lombok.*;
 import java.util.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 import cn.iocoder.yudao.framework.common.pojo.PageParam;
-import java.time.LocalDateTime;
-import org.springframework.format.annotation.DateTimeFormat;
-
-import static cn.iocoder.yudao.framework.common.util.date.DateUtils.FORMAT_YEAR_MONTH_DAY_HOUR_MINUTE_SECOND;
 
 @Schema(description = "管理后台 - 案例 Excel 导出 Request VO，参数和 ExamplePageReqVO 是一致的")
 @Data
 public class ExampleExportReqVO {
 
-    @Schema(description = "案例名称", example = "芋艿")
+    @Schema(description = "案例名称", example = "王五")
     private String name;
 
-    @Schema(description = "所属分类", example = "29393")
+    @Schema(description = "所属分类", example = "2625")
     private Integer categoryId;
 
     @Schema(description = "封面图")
@@ -32,16 +28,9 @@ public class ExampleExportReqVO {
     private String sort;
 
     @Schema(description = "是否展示到首页")
-    private Boolean indexFlag;
+    private String indexFlag;
 
-    @Schema(description = "创建者")
-    private String createBy;
-
-    @Schema(description = "创建时间")
-    @DateTimeFormat(pattern = FORMAT_YEAR_MONTH_DAY_HOUR_MINUTE_SECOND)
-    private LocalDateTime[] createTime;
-
-    @Schema(description = "更新者")
-    private String updateBy;
+    @Schema(description = "index排序")
+    private String indexSort;
 
 }

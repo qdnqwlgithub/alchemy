@@ -19,22 +19,23 @@ public interface CategoryMapper extends BaseMapperX<CategoryDO> {
 
     default PageResult<CategoryDO> selectPage(CategoryPageReqVO reqVO) {
         return selectPage(reqVO, new LambdaQueryWrapperX<CategoryDO>()
-                .likeIfPresent(CategoryDO::getName, reqVO.getName())
-                .eqIfPresent(CategoryDO::getAvatar, reqVO.getAvatar())
+//                .likeIfPresent(CategoryDO::getName, reqVO.getName())
+//                .eqIfPresent(CategoryDO::getAvatar, reqVO.getAvatar())
                 .eqIfPresent(CategoryDO::getParentId, reqVO.getParentId())
-                .eqIfPresent(CategoryDO::getViewNum, reqVO.getViewNum())
-                .eqIfPresent(CategoryDO::getSort, reqVO.getSort())
+//                .eqIfPresent(CategoryDO::getViewNum, reqVO.getViewNum())
+//                .eqIfPresent(CategoryDO::getSort, reqVO.getSort())
                 .betweenIfPresent(CategoryDO::getCreateTime, reqVO.getCreateTime())
                 .orderByDesc(CategoryDO::getId));
+//                return selectPage(reqVO, null);
     }
 
     default List<CategoryDO> selectList(CategoryExportReqVO reqVO) {
         return selectList(new LambdaQueryWrapperX<CategoryDO>()
-                .likeIfPresent(CategoryDO::getName, reqVO.getName())
-                .eqIfPresent(CategoryDO::getAvatar, reqVO.getAvatar())
+//                .likeIfPresent(CategoryDO::getName, reqVO.getName())
+//                .eqIfPresent(CategoryDO::getAvatar, reqVO.getAvatar())
                 .eqIfPresent(CategoryDO::getParentId, reqVO.getParentId())
-                .eqIfPresent(CategoryDO::getViewNum, reqVO.getViewNum())
-                .eqIfPresent(CategoryDO::getSort, reqVO.getSort())
+//                .eqIfPresent(CategoryDO::getViewNum, reqVO.getViewNum())
+//                .eqIfPresent(CategoryDO::getSort, reqVO.getSort())
                 .betweenIfPresent(CategoryDO::getCreateTime, reqVO.getCreateTime())
                 .orderByDesc(CategoryDO::getId));
     }

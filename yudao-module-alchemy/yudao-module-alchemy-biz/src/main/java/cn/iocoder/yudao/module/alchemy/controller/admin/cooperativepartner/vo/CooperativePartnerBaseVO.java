@@ -1,5 +1,7 @@
 package cn.iocoder.yudao.module.alchemy.controller.admin.cooperativepartner.vo;
 
+import cn.iocoder.yudao.module.alchemy.controller.admin.category.vo.I18Lon;
+import cn.iocoder.yudao.module.alchemy.controller.admin.category.vo.I18Str;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import java.util.*;
@@ -14,22 +16,16 @@ import javax.validation.constraints.*;
 @Data
 public class CooperativePartnerBaseVO {
 
-    @Schema(description = "合作伙伴名称", required = true, example = "赵六")
+    @Schema(description = "合作伙伴名称", required = true, example = "李四")
     @NotNull(message = "合作伙伴名称不能为空")
-    private String name;
+    private I18Str name;
 
     @Schema(description = "封面图", required = true)
     @NotNull(message = "封面图不能为空")
-    private String avatar;
+    private I18Str avatar;
 
     @Schema(description = "显示顺序", required = true)
     @NotNull(message = "显示顺序不能为空")
-    private String sort;
-
-    @Schema(description = "创建者")
-    private String createBy;
-
-    @Schema(description = "更新者")
-    private String updateBy;
+    private I18Lon sort;
 
 }
